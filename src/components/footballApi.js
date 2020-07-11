@@ -193,7 +193,7 @@ export class footballApi extends Component {
                                         {allData.date}
                                         </TableCell> 
                                         
-                                        <TableCell className="text-center"><span onClick={()=>this.leftNameClicked(allData.team1.name)}>{allData.team1.name} </span> Vs <span onClick={()=>this.rightNameClicked(allData.team2.name)}> {allData.team2.name}</span></TableCell>
+                                        <TableCell className="text-center"><a href="!#" onClick={()=>this.leftNameClicked(allData.team1.name)} className="bg-transparent-primary">{allData.team1.name} </a> Vs <a href="!#" onClick={()=>this.rightNameClicked(allData.team2.name)}> {allData.team2.name}</a></TableCell>
                                         <TableCell className="text-danger"><b>{allData.score1}- {allData.score2}</b></TableCell>
                                     </TableRow>
                                 )
@@ -211,7 +211,7 @@ export class footballApi extends Component {
                 onClose={this.handleClose}
                 >
                 <div style={getModalStyle()} className={classes.paper}>
-                    <h6 className="text-center">{this.state.TeamName}</h6>
+                    <h6 className="text-center text-light bg-primary p-2">{this.state.TeamName}</h6>
                 <TableContainer component={Paper}>
                 <Table aria-label="simple table">
                     <TableHead>
@@ -238,7 +238,7 @@ export class footballApi extends Component {
                 </Modal>
 
 
-                <div className="d-flex justify-content-center mt-4">
+                <div className="d-flex justify-content-center mt-5">
                     <Pagination postsPerPage={this.state.postsPerPage} totalPosts={this.state.all.length} paginate={this.paginate} nextPage={this.nextPage} previousPage={this.previousPage}/>
                 </div>   
 

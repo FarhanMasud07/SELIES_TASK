@@ -36,6 +36,14 @@ const styles = theme => ({
       padding: theme.spacing.unit * 4,
       outline: 'none',
     },
+    teamNamebg:{
+        backgroundColor:"#E1F5FE",
+        opaciy:".9",
+        borderRadius:".2rem",
+        padding:"1px",
+        marginRight:".9rem",
+        marginLeft:".5rem",
+    }
   });
 
 
@@ -193,7 +201,7 @@ export class footballApi extends Component {
                                         {allData.date}
                                         </TableCell> 
                                         
-                                        <TableCell className="text-center"><a href="!#" onClick={()=>this.leftNameClicked(allData.team1.name)} className="bg-transparent-primary">{allData.team1.name} </a> Vs <a href="!#" onClick={()=>this.rightNameClicked(allData.team2.name)}> {allData.team2.name}</a></TableCell>
+                                        <TableCell className="text-center"><a href="!#" onClick={()=>this.leftNameClicked(allData.team1.name)} className={classes.teamNamebg}>{allData.team1.name} </a> Vs <a href="!#" onClick={()=>this.rightNameClicked(allData.team2.name)} className={classes.teamNamebg}> {allData.team2.name}</a></TableCell>
                                         <TableCell className="text-danger"><b>{allData.score1}- {allData.score2}</b></TableCell>
                                     </TableRow>
                                 )
